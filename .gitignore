@@ -40,3 +40,4 @@ evo-wes-application/src/main/resources/application.yml
 application-dev-local.yml
 */*client/src/main/generated-sources/
 **/logs/*
+**/.mvn/*
