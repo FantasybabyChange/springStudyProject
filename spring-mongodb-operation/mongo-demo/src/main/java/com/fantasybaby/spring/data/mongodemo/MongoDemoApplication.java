@@ -50,11 +50,11 @@ public class MongoDemoApplication implements ApplicationRunner {
 					.updateTime(new Date()).build();
 			coffees.add(espresso);
 		}
-		Collection<Coffee> coffees1 = mongoTemplate.insertAll(coffees);
+//		Collection<Coffee> coffees1 = mongoTemplate.insertAll(coffees);
 //		log.info("Coffee {}", saved);
 
 		List<Coffee> list = mongoTemplate.find(
-				Query.query(Criteria.where("name").is("espresso")), Coffee.class);
+				Query.query(Criteria.where("name").regex("espresso*")), Coffee.class);
 		log.info("Find {} Coffee", list.size());
 		list.forEach(c -> log.info("Coffee {}", c));
 
