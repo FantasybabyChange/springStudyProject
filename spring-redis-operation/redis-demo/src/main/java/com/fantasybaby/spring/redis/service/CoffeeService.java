@@ -37,8 +37,9 @@ public class CoffeeService {
         }
         ExampleMatcher matcher = ExampleMatcher.matching()
                 .withMatcher("name", exact().ignoreCase());
-        Optional<Coffee> coffee = coffeeRepository.findOne(
-                Example.of(Coffee.builder().name(name).build(), matcher));
+        Optional<Coffee> coffee =  coffeeRepository.findByName(name);
+        /*Optional<Coffee> coffee = coffeeRepository.findOne(
+                Example.of(Coffee.builder().name(name).build(), matcher));*/
         log.info("Coffee Found: {}", coffee);
         if (coffee.isPresent()) {
             log.info("Put coffee {} to Redis.", name);

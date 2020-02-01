@@ -49,6 +49,7 @@ public class SpringRedisApplication implements ApplicationRunner {
 
 		for (int i = 0; i < 5; i++) {
 			c = coffeeService.findOneCoffee("mocha");
+			System.out.println(c.get());
 		}
 
 		log.info("Value from Redis: {}", c);
