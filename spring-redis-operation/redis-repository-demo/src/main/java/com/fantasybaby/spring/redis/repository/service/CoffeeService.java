@@ -1,15 +1,17 @@
 package com.fantasybaby.spring.redis.repository.service;
 
-import com.fantasybaby.spring.redis.repository.model.Coffee;
 import com.fantasybaby.spring.redis.repository.model.CoffeeCache;
+import com.fantasybaby.spring.redis.repository.model.mongo.Coffee;
 import com.fantasybaby.spring.redis.repository.repository.CoffeeCacheRepository;
 import com.fantasybaby.spring.redis.repository.repository.CoffeeRepository;
+import com.fantasybaby.spring.redis.repository.repository.mongo.CoffeeMongoRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,11 +22,13 @@ import static org.springframework.data.domain.ExampleMatcher.GenericPropertyMatc
 public class CoffeeService {
     @Autowired
     private CoffeeRepository coffeeRepository;
+    @Resource
+    private CoffeeMongoRepository coffeeMongoRepository;
     @Autowired
     private CoffeeCacheRepository cacheRepository;
 
     public List<Coffee> findAllCoffee() {
-        return coffeeRepository.findAll();
+        return coffeeMongoRepository.findAll();
     }
 
     public Optional<Coffee> findSimpleCoffeeFromCache(String name) {
@@ -38,10 +42,11 @@ public class CoffeeService {
             log.info("Coffee {} found in cache.", coffeeCache);
             return Optional.of(coffee);
         } else {
-            Optional<Coffee> raw = findOneCoffee(name);
+//            Optional<Coffee> raw = findOneCoffee(name);
+            Optional<Coffee> raw = coffeeMongoRepository.findByName(name);
             raw.ifPresent(c -> {
                 CoffeeCache coffeeCache = CoffeeCache.builder()
-                        .id(c.getId())
+//                        .id(c.getId())
                         .name(c.getName())
                         .price(c.getPrice())
                         .build();
@@ -52,12 +57,12 @@ public class CoffeeService {
         }
     }
 
-    public Optional<Coffee> findOneCoffee(String name) {
+    /*public Optional<Coffee> findOneCoffee(String name) {
         ExampleMatcher matcher = ExampleMatcher.matching()
                 .withMatcher("name", exact().ignoreCase());
         Optional<Coffee> coffee = coffeeRepository.findOne(
                 Example.of(Coffee.builder().name(name).build(), matcher));
         log.info("Coffee Found: {}", coffee);
         return coffee;
-    }
+    }*/
 }
