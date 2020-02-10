@@ -29,7 +29,7 @@ public class PerformanceAspect {
         }
     }
 
-    @Pointcut("execution(* geektime.spring.springbucks.repository..*(..))")
+    @Pointcut("execution(* com.fantasybaby.spring.aspect.demo.repository..*(..))")
     private void repositoryOps() {
     }
 }
