@@ -1,9 +1,9 @@
 package com.fantasybaby.mybatis.plsql.demo.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.apache.ibatis.type.Alias;
-import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 
@@ -25,7 +25,7 @@ public class TestDO implements Serializable {
     private String name;
 
     private Integer age;
-
+    @TableField("password")
     private String paasword;
 
 
