@@ -31,7 +31,7 @@ public class TestSelect extends MybatisPgsqlDemoApplicationTests {
     public void testUpdate() {
         UpdateWrapper update = new UpdateWrapper();
         update.eq("name", "tiancai");
-        update.set("paasword", "321_");
+        update.set("password", "321_");
         boolean save = testService.update(update);
         System.out.println(save);
     }

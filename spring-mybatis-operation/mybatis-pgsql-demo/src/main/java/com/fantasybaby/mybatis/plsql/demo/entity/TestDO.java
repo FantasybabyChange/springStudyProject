@@ -26,7 +26,7 @@ public class TestDO implements Serializable {
 
     private Integer age;
     @TableField("password")
-    private String paasword;
+    private String password;
 
 
 }
