@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: websocket
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://192.168.142.128:5432/postgres
+    username: postgres
+    password: root123
+    initial-size: 8
+    min-idle: 5
+    max-active: 10
+    query-timeout: 6000
+    transaction-query-timeout: 6000
+    remove-abandoned-timeout: 1800
+  freemarker:
+    request-context-attribute: req
+#    prefix: /htmls/
+    suffix: .html
+    content-type: text/html
+    enabled: true
+    cache: false
+    charset: UTF-8
+    allow-request-override: false
+    expose-request-attributes: true
+    expose-session-attributes: true
+    expose-spring-macro-helpers: true
+    template-loader-path: classpath:/htmls/
+server:
+  port: 7777
+  servlet:
+    encoding:
+      force: true
+      charset: UTF-8
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*/*Mapper.xml
+  typeAliasesPackage: com.fantasybaby.mybatis.plsql.demo.entity
+  configuration:
+    map-underscore-to-camel-case: true
+websocket:
+  port: 8888
