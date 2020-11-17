@@ -4,9 +4,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://192.168.142.128:5432/postgres
+    url: jdbc:postgresql://10.86.40.106:5432/postgres
     username: postgres
-    password: root123
+    password: kuka
     initial-size: 8
     min-idle: 5
     max-active: 10

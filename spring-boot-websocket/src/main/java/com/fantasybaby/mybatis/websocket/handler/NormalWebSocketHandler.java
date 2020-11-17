@@ -34,7 +34,7 @@ public class NormalWebSocketHandler extends SimpleChannelInboundHandler<TextWebS
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        //首次连接是FullHttpRequest，处理参数 by zhengkai.blog.csdn.net
+        //首次连接是FullHttpRequest，
         if (null != msg && msg instanceof FullHttpRequest) {
             FullHttpRequest request = (FullHttpRequest) msg;
             String uri = request.uri();
@@ -59,7 +59,7 @@ public class NormalWebSocketHandler extends SimpleChannelInboundHandler<TextWebS
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, TextWebSocketFrame msg) throws Exception {
-        
+
     }
 
     private void sendAllMessage(String message) {
