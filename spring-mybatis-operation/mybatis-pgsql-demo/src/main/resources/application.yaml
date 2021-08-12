@@ -5,15 +5,16 @@ spring:
     #中文
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://192.168.142.128:5432/postgres
+    url: jdbc:postgresql://192.168.1.3:5432/postgres
     username: postgres
-    password: root123
+    password: kuka
     initial-size: 8
     min-idle: 5
     max-active: 10
     query-timeout: 6000
     transaction-query-timeout: 6000
     remove-abandoned-timeout: 1800
+    initialization-mode: always
 server:
   port:7777
 mybatis-plus:
