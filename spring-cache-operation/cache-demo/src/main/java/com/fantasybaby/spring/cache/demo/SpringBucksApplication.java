@@ -11,29 +11,39 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+/**
+ * 春鹿应用程序
+ *
+ * @author Reid.Liu
+ * @date 2021/08/20
+ */
 @Slf4j
 @EnableTransactionManagement
 @SpringBootApplication
 @EnableJpaRepositories
 @EnableCaching(proxyTargetClass = true)
 public class SpringBucksApplication implements ApplicationRunner {
-	@Autowired
-	private CoffeeService coffeeService;
+    @Autowired
+    private CoffeeService coffeeService;
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringBucksApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SpringBucksApplication.class, args);
+    }
 
-	@Override
-	public void run(ApplicationArguments args) throws Exception {
-		log.info("Count: {}", coffeeService.findAllCoffee().size());
-		for (int i = 0; i < 10; i++) {
-			log.info("Reading from cache.");
-			coffeeService.findAllCoffee();
-		}
-		coffeeService.reloadCoffee();
-		log.info("Reading after refresh.");
-		coffeeService.findAllCoffee().forEach(c -> log.info("Coffee {}", c.getName()));
-	}
+    @Override
+    public void run(ApplicationArguments args) {
+        log.info("Count: {}", coffeeService.findAllCoffee().size());
+        for (int i = 0; i < 10; i++) {
+            log.info("Reading from cache.");
+            coffeeService.findAllCoffee();
+        }
+        coffeeService.reloadCoffee();
+        log.info("Reading after refresh.");
+        coffeeService.findAllCoffee().forEach(c -> log.info("Coffee {}", c.getName()));
+
+        log.info("find one {}", coffeeService.findOneCoffee("mocha").get());
+
+        log.info("find two {}", coffeeService.findOneCoffee("macchiato").get());
+    }
 }
 

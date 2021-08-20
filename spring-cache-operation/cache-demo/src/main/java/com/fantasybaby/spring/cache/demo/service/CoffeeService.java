@@ -1,10 +1,9 @@
 package com.fantasybaby.spring.cache.demo.service;
 
-import com.fantasybaby.spring.cache.demo.repository.CoffeeRepository;
 import com.fantasybaby.spring.cache.demo.model.Coffee;
+import com.fantasybaby.spring.cache.demo.repository.CoffeeRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Example;
@@ -18,20 +17,20 @@ import static org.springframework.data.domain.ExampleMatcher.GenericPropertyMatc
 
 @Slf4j
 @Service
-@CacheConfig(cacheNames = "coffee")
+//@CacheConfig
 public class CoffeeService {
     @Autowired
     private CoffeeRepository coffeeRepository;
 
-    @Cacheable()
+    @Cacheable({"coffees","coffees2"})
     public List<Coffee> findAllCoffee() {
         return coffeeRepository.findAll();
     }
 
-    @CacheEvict
+    @CacheEvict({"coffees","coffees2"})
     public void reloadCoffee() {
     }
-
+    @Cacheable(cacheNames = "coffees",key = "#name")
     public Optional<Coffee> findOneCoffee(String name) {
         ExampleMatcher matcher = ExampleMatcher.matching()
                 .withMatcher("name", exact().ignoreCase());
