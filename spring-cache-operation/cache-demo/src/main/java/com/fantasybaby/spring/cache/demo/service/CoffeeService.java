@@ -1,5 +1,6 @@
 package com.fantasybaby.spring.cache.demo.service;
 
+import com.fantasybaby.spring.cache.demo.annotation.CoffeeCache;
 import com.fantasybaby.spring.cache.demo.model.Coffee;
 import com.fantasybaby.spring.cache.demo.repository.CoffeeRepository;
 import lombok.extern.slf4j.Slf4j;
@@ -22,7 +23,8 @@ public class CoffeeService {
     @Autowired
     private CoffeeRepository coffeeRepository;
 
-    @Cacheable({"coffees","coffees2"})
+//    @Cacheable({"coffees","coffees2"})
+    @CoffeeCache
     public List<Coffee> findAllCoffee() {
         return coffeeRepository.findAll();
     }
