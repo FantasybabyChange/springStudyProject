@@ -5,7 +5,7 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/aop
         http://www.springframework.org/schema/aop/spring-aop.xsd">
-
+    <!--打开后同时增强 -->
     <aop:aspectj-autoproxy/>
 
     <bean id="testBeanX" class="com.fantasybaby.mvc.context.TestBean">
