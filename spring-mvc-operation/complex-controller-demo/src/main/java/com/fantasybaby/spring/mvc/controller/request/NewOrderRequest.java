@@ -1,4 +1,4 @@
-package geektime.spring.springbucks.waiter.controller.request;
+package com.fantasybaby.spring.mvc.controller.request;
 
 import lombok.Getter;
 import lombok.Setter;

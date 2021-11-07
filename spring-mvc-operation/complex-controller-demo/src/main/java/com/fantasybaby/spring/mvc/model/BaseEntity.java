@@ -1,4 +1,4 @@
-package geektime.spring.springbucks.waiter.model;
+package com.fantasybaby.spring.mvc.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;

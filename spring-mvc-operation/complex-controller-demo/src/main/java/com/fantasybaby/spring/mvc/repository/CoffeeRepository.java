@@ -1,6 +1,6 @@
-package geektime.spring.springbucks.waiter.repository;
+package com.fantasybaby.spring.mvc.repository;
 
-import geektime.spring.springbucks.waiter.model.Coffee;
+import com.fantasybaby.spring.mvc.model.Coffee;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

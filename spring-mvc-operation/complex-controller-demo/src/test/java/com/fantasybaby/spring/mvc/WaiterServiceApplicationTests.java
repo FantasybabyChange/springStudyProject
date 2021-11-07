@@ -1,4 +1,4 @@
-package geektime.spring.springbucks.waiter;
+package com.fantasybaby.spring.mvc;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

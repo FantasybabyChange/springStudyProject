@@ -1,4 +1,4 @@
-package geektime.spring.springbucks.waiter;
+package com.fantasybaby.spring.mvc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

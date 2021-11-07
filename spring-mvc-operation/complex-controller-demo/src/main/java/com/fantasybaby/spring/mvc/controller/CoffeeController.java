@@ -1,7 +1,7 @@
-package geektime.spring.springbucks.waiter.controller;
+package com.fantasybaby.spring.mvc.controller;
 
-import geektime.spring.springbucks.waiter.model.Coffee;
-import geektime.spring.springbucks.waiter.service.CoffeeService;
+import com.fantasybaby.spring.mvc.model.Coffee;
+import com.fantasybaby.spring.mvc.service.CoffeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
