@@ -55,6 +55,7 @@ public class AdvanceRestTemplateApplication implements ApplicationRunner {
 		CloseableHttpClient httpClient = HttpClients.custom()
 				.setConnectionManager(connectionManager)
 				.evictIdleConnections(30, TimeUnit.SECONDS)
+				// 关闭重试
 				.disableAutomaticRetries()
 				// 有 Keep-Alive 认里面的值，没有的话永久有效
 				//.setKeepAliveStrategy(DefaultConnectionKeepAliveStrategy.INSTANCE)
