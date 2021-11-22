@@ -1,4 +1,4 @@
-package geektime.spring.springbucks.waiter.model;
+package com.fantasybaby.spring.webflux.waiter.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

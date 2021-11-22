@@ -1,4 +1,4 @@
-package geektime.spring.springbucks.waiter.support;
+package com.fantasybaby.spring.webflux.waiter.support;
 
 import org.joda.money.Money;
 import org.springframework.core.convert.converter.Converter;

@@ -1,8 +1,8 @@
-package geektime.spring.springbucks.waiter.repository;
+package com.fantasybaby.spring.webflux.waiter.repository;
 
-import geektime.spring.springbucks.waiter.model.Coffee;
+import com.fantasybaby.spring.webflux.waiter.model.Coffee;
+import org.springframework.data.r2dbc.repository.Query;
 import org.springframework.data.r2dbc.repository.R2dbcRepository;
-import org.springframework.data.r2dbc.repository.query.Query;
 import reactor.core.publisher.Mono;
 
 public interface CoffeeRepository extends R2dbcRepository<Coffee, Long> {

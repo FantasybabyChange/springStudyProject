@@ -1,9 +1,9 @@
-package geektime.spring.springbucks.waiter.controller;
+package com.fantasybaby.spring.webflux.waiter.controller;
 
-import geektime.spring.springbucks.waiter.controller.request.NewOrderRequest;
-import geektime.spring.springbucks.waiter.model.CoffeeOrder;
-import geektime.spring.springbucks.waiter.service.CoffeeService;
-import geektime.spring.springbucks.waiter.service.OrderService;
+import com.fantasybaby.spring.webflux.waiter.controller.request.NewOrderRequest;
+import com.fantasybaby.spring.webflux.waiter.model.CoffeeOrder;
+import com.fantasybaby.spring.webflux.waiter.service.CoffeeService;
+import com.fantasybaby.spring.webflux.waiter.service.OrderService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

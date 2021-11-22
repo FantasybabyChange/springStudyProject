@@ -1,9 +1,9 @@
-package geektime.spring.springbucks.waiter.service;
+package com.fantasybaby.spring.webflux.waiter.service;
 
-import geektime.spring.springbucks.waiter.model.CoffeeOrder;
-import geektime.spring.springbucks.waiter.model.OrderState;
-import geektime.spring.springbucks.waiter.repository.CoffeeOrderRepository;
-import geektime.spring.springbucks.waiter.repository.CoffeeRepository;
+import com.fantasybaby.spring.webflux.waiter.model.CoffeeOrder;
+import com.fantasybaby.spring.webflux.waiter.model.OrderState;
+import com.fantasybaby.spring.webflux.waiter.repository.CoffeeOrderRepository;
+import com.fantasybaby.spring.webflux.waiter.repository.CoffeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;

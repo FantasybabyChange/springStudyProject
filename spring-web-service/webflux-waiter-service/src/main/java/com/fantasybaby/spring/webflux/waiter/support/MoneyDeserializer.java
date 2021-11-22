@@ -1,4 +1,4 @@
-package geektime.spring.springbucks.waiter.support;
+package com.fantasybaby.spring.webflux.waiter.support;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;

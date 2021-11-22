@@ -1,7 +1,7 @@
-package geektime.spring.springbucks.waiter.controller;
+package com.fantasybaby.spring.webflux.waiter.controller;
 
-import geektime.spring.springbucks.waiter.model.Coffee;
-import geektime.spring.springbucks.waiter.service.CoffeeService;
+import com.fantasybaby.spring.webflux.waiter.model.Coffee;
+import com.fantasybaby.spring.webflux.waiter.service.CoffeeService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

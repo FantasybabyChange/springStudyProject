@@ -1,4 +1,4 @@
-package geektime.spring.springbucks.waiter.support;
+package com.fantasybaby.spring.webflux.waiter.support;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
