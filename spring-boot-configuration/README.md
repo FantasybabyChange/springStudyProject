@@ -2,7 +2,7 @@
 2. 依赖起步
 
 ## prjoect  module
-![project module](Module/configurationmodule.png)
+![project module](module/configuration_module.png)
 	
 	
 	

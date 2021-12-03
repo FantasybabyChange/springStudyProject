@@ -1,5 +1,5 @@
 @startuml configuration module
-!theme crt-amber
+!theme sketchy-outline 
 title configuration module
 [autoconfigure-demo] as ad
 [demo-spring-autoconfiguration-greeting] as dge
