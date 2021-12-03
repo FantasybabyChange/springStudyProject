@@ -11,7 +11,8 @@ note bottom of dsa
    自动装配项目通过自动配置加载对应实例
 end note
 note bottom of ad
-   实际调用类 可以通过引用jar 或者打开配置来获取demo-spring-autoconfiguration-greeting的实例
+   实际调用类 可以通过引用jar或者打开配置来获取
+   demo-spring-autoconfiguration-greeting的实例
 end note
 
 dsa ->dge:jar 
