@@ -1,0 +1,20 @@
+@startuml configuration module
+!theme crt-amber
+title configuration module
+[autoconfigure-demo] as ad
+[demo-spring-autoconfiguration-greeting] as dge
+[demo-spring-boot-autoconfigure] as dsa
+note bottom of dge
+   被实际调用的bean
+end note
+note bottom of dsa
+   自动装配项目通过自动配置加载对应实例
+end note
+note bottom of ad
+   实际调用类 可以通过引用jar 或者打开配置来获取demo-spring-autoconfiguration-greeting的实例
+end note
+
+dsa ->dge:jar 
+ad ->dsa:jar 
+
+@enduml
