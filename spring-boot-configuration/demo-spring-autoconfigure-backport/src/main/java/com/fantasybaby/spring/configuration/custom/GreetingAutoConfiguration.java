@@ -1,4 +1,4 @@
-package geektime.spring.hello.greeting;
+package com.fantasybaby.spring.configuration.custom;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

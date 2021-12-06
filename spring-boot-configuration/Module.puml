@@ -1,9 +1,11 @@
-@startuml configuration module
+@startuml CONFIGURATION_MODULE
 !theme sketchy-outline
 title configuration module
 [autoconfigure-demo] as ad
 [demo-spring-autoconfiguration-greeting] as dge
 [demo-spring-boot-autoconfigure] as dsa
+[demo-spring-autoconfigure-backport] as dacb
+[demo-spring-boot-starter] as dsbs
 note bottom of dge
    被实际调用的bean
 end note
@@ -14,8 +16,10 @@ note bottom of ad
    实际调用类 可以通过引用jar或者打开配置来获取
    demo-spring-autoconfiguration-greeting的实例
 end note
-
-dsa ->dge:jar 
+note bottom of dacb
+   老版本的spring 通过bean注册来实现自动配置
+end note
 ad ->dsa:jar 
-
+dsa ->dge:jar 
+ad ->dacb:jar
 @enduml

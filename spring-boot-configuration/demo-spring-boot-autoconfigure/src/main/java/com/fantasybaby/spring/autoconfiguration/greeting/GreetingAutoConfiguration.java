@@ -13,6 +13,6 @@ public class GreetingAutoConfiguration {
     @ConditionalOnMissingBean(GreetingApplicationRunner.class)
     @ConditionalOnProperty(name = "greeting.enabled", havingValue = "true", matchIfMissing = true)
     public GreetingApplicationRunner greetingApplicationRunner() {
-        return new GreetingApplicationRunner();
+        return new GreetingApplicationRunner("every one");
     }
 }
