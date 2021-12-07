@@ -1,4 +1,4 @@
-package geektime.spring.hello;
+package com.fantasybaby.spring.propertysource;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

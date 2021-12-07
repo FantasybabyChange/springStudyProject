@@ -6,6 +6,8 @@ title configuration module
 [demo-spring-boot-autoconfigure] as dsa
 [demo-spring-autoconfigure-backport] as dacb
 [demo-spring-boot-starter] as dsbs
+
+[property-source-demo] as psd
 note bottom of dge
    被实际调用的bean
 end note
@@ -29,4 +31,8 @@ ad->dsbs:pom
 ad ->dsa:jar 
 dsa ->dge:jar 
 ad ->dacb:jar
+
+note bottom of psd
+   Spring boot 自定义配置属性加载
+end note
 @enduml
