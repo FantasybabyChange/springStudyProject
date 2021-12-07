@@ -14,6 +14,8 @@ public class PropertySourceDemoApplication implements ApplicationRunner {
     private String property;
     @Value("${fantasybaby.yaml-property}")
     private String yamlProperty;
+    @Value("${fantasybaby.property1}")
+    private String property1;
 
     public static void main(String[] args) {
         SpringApplication.run(PropertySourceDemoApplication.class, args);
@@ -23,5 +25,7 @@ public class PropertySourceDemoApplication implements ApplicationRunner {
     public void run(ApplicationArguments args) {
         log.info("first:{}", property);
         log.info("second:{}", yamlProperty);
+        log.info("last:{}", property1);
+
     }
 }
