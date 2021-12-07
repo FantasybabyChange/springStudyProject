@@ -22,6 +22,7 @@
 		<module>autoconfigure-demo</module>
 		<module>demo-spring-autoconfiguration-greeting</module>
 		<module>demo-spring-boot-autoconfigure</module>
+		<module>demo-spring-boot-starter</module>
 	</modules>
 
 	<dependencyManagement>

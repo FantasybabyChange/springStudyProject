@@ -19,6 +19,13 @@ end note
 note bottom of dacb
    老版本的spring 通过bean注册来实现自动配置
 end note
+
+note bottom of dsbs
+做为starter 引入其他两个项目的依赖
+end note
+dsbs->dge:pom
+dsbs->dsa:pom
+ad->dsbs:pom
 ad ->dsa:jar 
 dsa ->dge:jar 
 ad ->dacb:jar
