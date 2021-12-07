@@ -3,20 +3,21 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>geektime.spring.hello</groupId>
-	<artifactId>geektime-spring-boot-starter</artifactId>
+	<artifactId>demo-spring-boot-starter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>geektime-spring-boot-starter</name>
-	<description>Demo project for Spring Boot</description>
+	<name>demo-spring-boot-starter</name>
+	<description>Demo project for Spring Boot starter</description>
 
 	<dependencies>
+
 		<dependency>
-			<groupId>geektime.spring.hello</groupId>
-			<artifactId>geektime-spring-boot-autoconfigure</artifactId>
+			<groupId>com.fantasybaby.spring</groupId>
+			<artifactId>demo-spring-boot-autoconfigure</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>geektime.spring.hello</groupId>
-			<artifactId>greeting</artifactId>
+			<groupId>com.fantasybaby.spring</groupId>
+			<artifactId>demo-spring-autoconfiguration-greeting</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>

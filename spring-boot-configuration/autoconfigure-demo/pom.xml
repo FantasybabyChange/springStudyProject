@@ -14,24 +14,24 @@
     <description>Demo project for Spring Boot autoconfigure demo</description>
 
     <dependencies>
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+        </dependency>-->
+
+
+        <dependency>
+            <groupId>geektime.spring.hello</groupId>
+            <artifactId>demo-spring-boot-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
-
-        <!--<dependency>-->
-        <!--<groupId>geektime.spring.hello</groupId>-->
-        <!--<artifactId>geektime-spring-boot-starter</artifactId>-->
-        <!--<version>0.0.1-SNAPSHOT</version>-->
-        <!--</dependency>-->
-
         <!-- 以下是手工实现的自动配置 -->
-        <dependency>
+       <!-- <dependency>
             <groupId>com.fantasybaby.spring</groupId>
             <artifactId>demo-spring-autoconfigure-backport</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+        </dependency>-->
 
         <!-- 以下是基于Spring Boot的自动配置 -->
         <!--<dependency>
@@ -39,12 +39,12 @@
             <artifactId>demo-spring-boot-autoconfigure</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        -->
+
         <dependency>
             <groupId>com.fantasybaby.spring</groupId>
             <artifactId>demo-spring-autoconfiguration-greeting</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+        </dependency> -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
