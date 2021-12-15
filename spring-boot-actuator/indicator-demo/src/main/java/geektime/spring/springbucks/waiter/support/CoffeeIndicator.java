@@ -6,9 +6,11 @@ import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.HealthIndicator;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
+
 @Component
 public class CoffeeIndicator implements HealthIndicator {
-    @Autowired
+    @Resource
     private CoffeeService coffeeService;
 
     @Override
