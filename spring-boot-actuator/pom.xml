@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.fantasybaby.spring</groupId>
-    <artifactId>spring-boot-actuator</artifactId>
+    <artifactId>spring-boot-actuator-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-actuator-demo</name>
     <description>Demo project for spring-boot-actuator</description>
@@ -20,6 +20,7 @@
     </properties>
     <modules>
         <module>indicator-demo</module>
+        <module>metrics-demo</module>
     </modules>
 
     <dependencyManagement>
