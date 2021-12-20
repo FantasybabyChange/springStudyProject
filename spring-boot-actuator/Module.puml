@@ -3,6 +3,8 @@
 title actuator module
 [indicator-demo] as id
 [metrics-demo] as md
+[admin-server-demo] as asd
+[admin-client-demo] as acd
 note bottom of id
     添加Health 指标
 end note
@@ -10,5 +12,13 @@ end note
 note bottom of md
   metrics 配置 以及counter的展示
 end note
-
+note bottom of asd
+ spring boot admin 服务端
+ 通过spring security配置权限
+end note
+note bottom of acd
+spring boot admin 客户端
+ 配置actuator的权限 并且配置服务端的url
+end note
+acd -->asd
 @enduml

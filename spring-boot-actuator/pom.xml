@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.1.RELEASE</version>
+        <version>2.6.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.fantasybaby.spring</groupId>
@@ -16,26 +16,27 @@
     <packaging>pom</packaging>
     <properties>
         <java.version>1.8</java.version>
-        <spring-boot.version>2.3.1.RELEASE</spring-boot.version>
+        <spring-boot.admin.version>2.5.3</spring-boot.admin.version>
+
     </properties>
     <modules>
         <module>indicator-demo</module>
         <module>metrics-demo</module>
+        <module>admin-server-demo</module>
+        <module>admin-client-demo</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-server</artifactId>
+                <version>${spring-boot.admin.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot</artifactId>
-                <version>${spring-boot.version}</version>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-client</artifactId>
+                <version>${spring-boot.admin.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
