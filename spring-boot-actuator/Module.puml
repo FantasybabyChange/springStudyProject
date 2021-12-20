@@ -5,6 +5,7 @@ title actuator module
 [metrics-demo] as md
 [admin-server-demo] as asd
 [admin-client-demo] as acd
+[tomcat-demo] as td
 note bottom of id
     添加Health 指标
 end note
@@ -21,4 +22,8 @@ spring boot admin 客户端
  配置actuator的权限 并且配置服务端的url
 end note
 acd -->asd
+note top of td
+内置Tomcat  相关配置 
+压缩 以及异常打印
+end note
 @enduml

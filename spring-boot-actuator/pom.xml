@@ -24,6 +24,7 @@
         <module>metrics-demo</module>
         <module>admin-server-demo</module>
         <module>admin-client-demo</module>
+        <module>tomcat-demo</module>
     </modules>
 
     <dependencyManagement>
