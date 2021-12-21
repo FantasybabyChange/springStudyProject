@@ -29,10 +29,10 @@ public class TomcatDemoApplication implements WebMvcConfigurer,
 
 	@Override
 	public void customize(TomcatServletWebServerFactory factory) {
-		Compression compression = new Compression();
+		/*Compression compression = new Compression();
 		compression.setEnabled(true);
 		compression.setMinResponseSize(DataSize.ofBytes(512));
-		factory.setCompression(compression);
+		factory.setCompression(compression);*/
 	}
 
 	@Override
