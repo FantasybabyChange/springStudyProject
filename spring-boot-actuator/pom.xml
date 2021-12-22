@@ -25,8 +25,8 @@
         <module>admin-server-demo</module>
         <module>admin-client-demo</module>
         <module>tomcat-demo</module>
-        <module>http2-https-customer</module>
-        <module>http2-https-waiter</module>
+        <module>http2-customer</module>
+        <module>http2-waiter</module>
     </modules>
     <dependencies>
         <dependency>
