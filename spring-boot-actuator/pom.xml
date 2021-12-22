@@ -25,8 +25,15 @@
         <module>admin-server-demo</module>
         <module>admin-client-demo</module>
         <module>tomcat-demo</module>
+        <module>http2-https-customer</module>
+        <module>http2-https-waiter</module>
     </modules>
-
+    <dependencies>
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+        </dependency>
+    </dependencies>
     <dependencyManagement>
         <dependencies>
             <dependency>
