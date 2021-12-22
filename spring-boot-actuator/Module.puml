@@ -6,6 +6,9 @@ title actuator module
 [admin-server-demo] as asd
 [admin-client-demo] as acd
 [tomcat-demo] as td
+
+[http2-https-customer] as hhc
+[http2-https-waiter] as hhw
 note bottom of id
     添加Health 指标
 end note
@@ -26,4 +29,13 @@ note top of td
 内置Tomcat  相关配置 
 压缩 以及异常打印
 end note
+
+note bottom of hhc
+客户端 使用https访问
+end note
+
+note bottom of hhw
+提供https的服务
+end note
+hhc-->hhw
 @enduml
