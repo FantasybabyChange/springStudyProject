@@ -27,6 +27,8 @@
         <module>tomcat-demo</module>
         <module>http2-customer</module>
         <module>http2-waiter</module>
+        <module>https-customer</module>
+        <module>https-waiter</module>
     </modules>
     <dependencies>
         <dependency>

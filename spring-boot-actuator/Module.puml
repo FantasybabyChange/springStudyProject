@@ -9,6 +9,9 @@ title actuator module
 
 [http2-customer] as hhc
 [http2-waiter] as hhw
+
+[https-customer] as hhcs
+[https-waiter] as hhws
 note bottom of id
     添加Health 指标
 end note
@@ -36,6 +39,19 @@ end note
 
 note bottom of hhw
 提供http2的服务
+tomcat
+ 需要jdk9+  
+ tomcat 9+
+
 end note
 hhc-->hhw
+
+note bottom of hhcs
+客户端 使用https访问
+end note
+
+note bottom of hhws
+提供https的服务 ssl认证
+end note
+hhcs-->hhws
 @enduml
