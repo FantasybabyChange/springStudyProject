@@ -3,13 +3,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.fantasybaby.spring</groupId>
-		<artifactId>spring-boot-actuator-demo</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</parent>
+        <groupId>com.fantasybaby.spring</groupId>
+        <artifactId>spring-boot-actuator-demo</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
 	<groupId>com.fantasybaby.spring</groupId>
-	<artifactId>http2-customer</artifactId>
-	<name>http2-customer</name>
+	<artifactId>command-line</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>command-line</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -20,23 +21,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.joda</groupId>
-			<artifactId>joda-money</artifactId>
-			<version>1.0.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>com.squareup.okhttp3</groupId>
-			<artifactId>okhttp</artifactId>
-			<version>3.14.0</version>
 		</dependency>
 
 		<dependency>
