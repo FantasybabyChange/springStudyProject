@@ -30,6 +30,7 @@
         <module>https-customer</module>
         <module>https-waiter</module>
         <module>command-line-demo</module>
+        <module>jar-demo</module>
     </modules>
     <dependencies>
         <dependency>
