@@ -13,6 +13,7 @@ title actuator module
 [https-customer] as hhcs
 [https-waiter] as hhws
 [command-line-demo] as cld
+[jar-demo] as jdd
 
 note bottom of id
     添加Health 指标
@@ -55,9 +56,12 @@ end note
 note bottom of hhws
 提供https的服务 ssl认证
 end note
-
+hhcs-->hhws
 note bottom of cld
 创建非web程序 使用命令行启动
 end note
-hhcs-->hhws
+note bottom of jdd
+使用spring 打包jar 运行可执行jar包
+end note
+
 @enduml
