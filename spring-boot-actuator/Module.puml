@@ -15,6 +15,7 @@ title actuator module
 [command-line-demo] as cld
 [jar-demo] as jdd
 
+[docker-demo] as dd
 note bottom of id
     添加Health 指标
 end note
@@ -62,6 +63,10 @@ note bottom of cld
 end note
 note bottom of jdd
 使用spring 打包jar 运行可执行jar包
+end note
+
+note bottom of dd
+通过插件打包项目 到docker iamge
 end note
 
 @enduml
