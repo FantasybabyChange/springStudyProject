@@ -22,6 +22,8 @@ import java.util.TimeZone;
 public class WaiterServiceApplication implements WebMvcConfigurer {
 
 	public static void main(String[] args) {
+
+		System.setProperty("spring.cloud.bootstrap.enabled","true");
 		SpringApplication.run(WaiterServiceApplication.class, args);
 	}
 
