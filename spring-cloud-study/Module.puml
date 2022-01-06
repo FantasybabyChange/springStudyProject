@@ -1,0 +1,14 @@
+@startuml SPRING_CLOUD_STUDY_MODULE
+!theme sketchy-outline
+title spring cloud module
+[eureka-server-demo] as esd
+[eureka-waiter-service] as ews
+note bottom of esd
+   eureka 服务注册中心
+end note
+
+note bottom of ews
+   注册eureka的服务
+end note
+
+@enduml
