@@ -26,6 +26,7 @@ public class CustomerRunner implements ApplicationRunner {
     private RestTemplate restTemplate;
     @Autowired
     private DiscoveryClient discoveryClient;
+    private final static String SERVICE_NAME = "waiter-service";
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
@@ -37,16 +38,17 @@ public class CustomerRunner implements ApplicationRunner {
 
     private void showServiceInstances() {
         log.info("DiscoveryClient: {}", discoveryClient.getClass().getName());
-        discoveryClient.getInstances("waiter-service").forEach(s -> {
+        discoveryClient.getInstances(SERVICE_NAME).forEach(s -> {
             log.info("Host: {}, Port: {}", s.getHost(), s.getPort());
         });
     }
 
     private void readMenu() {
         ParameterizedTypeReference<List<Coffee>> ptr =
-                new ParameterizedTypeReference<List<Coffee>>() {};
+                new ParameterizedTypeReference<List<Coffee>>() {
+                };
         ResponseEntity<List<Coffee>> list = restTemplate
-                .exchange("http://waiter-service/coffee/", HttpMethod.GET, null, ptr);
+                .exchange("http://" + SERVICE_NAME + "/coffee/", HttpMethod.GET, null, ptr);
         list.getBody().forEach(c -> log.info("Coffee: {}", c));
     }
 
@@ -56,7 +58,7 @@ public class CustomerRunner implements ApplicationRunner {
                 .items(Arrays.asList("capuccino"))
                 .build();
         RequestEntity<NewOrderRequest> request = RequestEntity
-                .post(UriComponentsBuilder.fromUriString("http://waiter-service/order/").build().toUri())
+                .post(UriComponentsBuilder.fromUriString("http://" + SERVICE_NAME + "/order/").build().toUri())
                 .body(orderRequest);
         ResponseEntity<CoffeeOrder> response = restTemplate.exchange(request, CoffeeOrder.class);
         log.info("Order Request Status Code: {}", response.getStatusCode());
@@ -67,7 +69,7 @@ public class CustomerRunner implements ApplicationRunner {
 
     private void queryOrder(Long id) {
         CoffeeOrder order = restTemplate
-                .getForObject("http://waiter-service/order/{id}", CoffeeOrder.class, id);
+                .getForObject("http://" + SERVICE_NAME + "/order/{id}", CoffeeOrder.class, id);
         log.info("Order: {}", order);
     }
 }
