@@ -25,12 +25,12 @@ end note
 note bottom of dsbs
 做为starter 引入其他两个项目的依赖
 end note
-dsbs->dge:pom
-dsbs->dsa:pom
-ad->dsbs:pom
-ad ->dsa:jar 
-dsa ->dge:jar 
-ad ->dacb:jar
+dsbs-->dge:pom
+dsbs-->dsa:pom
+ad -->dsbs:pom
+ad -->dsa:jar 
+dsa -->dge:jar 
+ad -->dacb:jar
 
 note bottom of psd
    Spring boot 自定义配置属性加载

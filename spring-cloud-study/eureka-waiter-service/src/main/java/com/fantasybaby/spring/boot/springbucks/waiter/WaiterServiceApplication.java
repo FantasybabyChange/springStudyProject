@@ -18,12 +18,12 @@ import java.util.TimeZone;
 @SpringBootApplication
 @EnableJpaRepositories
 @EnableCaching
-@EnableEurekaClient
+@EnableDiscoveryClient
 public class WaiterServiceApplication implements WebMvcConfigurer {
 
 	public static void main(String[] args) {
 
-		System.setProperty("spring.cloud.bootstrap.enabled","true");
+//		System.setProperty("spring.cloud.bootstrap.enabled","true");
 		SpringApplication.run(WaiterServiceApplication.class, args);
 	}
 

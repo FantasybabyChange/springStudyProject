@@ -1,14 +1,31 @@
 @startuml SPRING_CLOUD_STUDY_MODULE
 !theme sketchy-outline
 title spring cloud module
-[eureka-server-demo] as esd
-[eureka-waiter-service] as ews
-note bottom of esd
-   eureka 服务注册中心
-end note
+skinparam interface {
+}
+skinparam component {
+   backgroundColor LightSteelBlue
+   FontSize 14
+   ArrowFontSize 14
+   ArrowFontColor #777777
+   ArrowColor #FF6655
+}
 
-note bottom of ews
+component esd[
+   eureka-server-demo
+   eureka的服务注册中心
+] 
+
+component ews[
+   eureka-waiter-service
    注册eureka的服务
-end note
+]
+component lbcs[
+   load-balance-customer-service
+   spring cloud负载均衡
+   因为ribbon在新版本给砍掉了  spring cloud自己出手
+]
 
+ews --> esd
+lbcs --> esd:load balance request waiter service
 @enduml
