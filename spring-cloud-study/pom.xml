@@ -24,6 +24,7 @@
         <module>eureka-server-demo</module>
         <module>eureka-waiter-service</module>
         <module>load-balance-customer-service</module>
+        <module>feign-customer-service</module>
     </modules>
 
     <dependencyManagement>

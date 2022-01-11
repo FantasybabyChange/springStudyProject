@@ -49,7 +49,7 @@ public class CustomerServiceApplication {
 		return requestFactory;
 	}
 
-	@LoadBalanced
+//	@LoadBalanced
 	@Bean
 	public RestTemplate restTemplate(RestTemplateBuilder builder) {
 		return builder

@@ -26,6 +26,10 @@ package "spring-cloud-netflix"{
    因为ribbon在新版本给砍掉了  spring cloud自己出手
    ]
    ews --> esd
-lbcs --> esd:load balance request waiter service
+   lbcs --> esd:load balance request waiter service
 }
+component fcs[
+   feign-customer-service
+   使用 open feign 来实现客户端调用
+]
 @enduml
