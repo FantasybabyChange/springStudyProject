@@ -25,6 +25,8 @@
         <module>eureka-waiter-service</module>
         <module>load-balance-customer-service</module>
         <module>feign-customer-service</module>
+        <module>zk-waiter-service</module>
+        <module>zk-customer-service</module>
     </modules>
 
     <dependencyManagement>
