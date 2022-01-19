@@ -32,6 +32,7 @@ component fcs[
    feign-customer-service
    使用 open feign 来实现客户端调用
 ]
+ fcs->esd:使用feign调用服务
 
 package "spring-cloud-zookeeper"{
    component zk[
