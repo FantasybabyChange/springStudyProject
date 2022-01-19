@@ -18,10 +18,10 @@ import java.util.TimeZone;
 @EnableJpaRepositories
 @EnableCaching
 @EnableDiscoveryClient
-public class WaiterServiceApplication implements WebMvcConfigurer {
+public class ClWaiterServiceApplication implements WebMvcConfigurer {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WaiterServiceApplication.class, args);
+		SpringApplication.run(ClWaiterServiceApplication.class, args);
 	}
 
 	@Override

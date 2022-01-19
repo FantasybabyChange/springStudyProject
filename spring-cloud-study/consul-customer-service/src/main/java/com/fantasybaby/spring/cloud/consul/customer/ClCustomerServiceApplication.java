@@ -20,10 +20,10 @@ import java.util.concurrent.TimeUnit;
 @SpringBootApplication
 @Slf4j
 @EnableDiscoveryClient
-public class CustomerServiceApplication {
+public class ClCustomerServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CustomerServiceApplication.class, args);
+		SpringApplication.run(ClCustomerServiceApplication.class, args);
 	}
 
 	@Bean
