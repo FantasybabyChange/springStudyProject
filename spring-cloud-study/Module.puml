@@ -32,4 +32,38 @@ component fcs[
    feign-customer-service
    使用 open feign 来实现客户端调用
 ]
+
+package "spring-cloud-zookeeper"{
+   component zk[
+   zookeeper
+   ]
+   component zws[
+   zk-waiter-service
+   注册zookeeper的服务
+   ]
+
+   component zcs[
+   zk-customer-service
+   使用zookeeper的客户端
+   ]
+   zws --> zk
+   zcs --> zk
+}
+
+package "spring-cloud-consul"{
+   component cs[
+   consul
+   ]
+   component cws[
+   consul-waiter-service
+   注册consul的服务
+   ]
+
+   component ccs[
+   consul-customer-service
+   使用consul的客户端
+   ]
+   cws --> cs
+   ccs --> zk
+}
 @enduml
