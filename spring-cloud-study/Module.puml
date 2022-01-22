@@ -67,4 +67,22 @@ package "spring-cloud-consul"{
    cws --> cs
    ccs --> zk
 }
+
+package "spring-cloud-nacos"{
+   component ns[
+    nacos 
+    2.0 后需要暴漏grpc接口
+   ]
+   component nws[
+   nacos-waiter-service
+   注册nacos的服务
+   ]
+
+   component ncs[
+   nacos-customer-service
+   使用nacos的客户端
+   ]
+   nws --> ns
+   ncs --> ns
+}
 @enduml
