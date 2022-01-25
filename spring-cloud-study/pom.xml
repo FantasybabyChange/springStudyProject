@@ -32,6 +32,7 @@
         <module>consul-waiter-service</module>
         <module>nacos-customer-service</module>
         <module>nacos-waiter-service</module>
+        <module>fixed-discovery-client-demo</module>
     </modules>
     <dependencies>
         <dependency>
