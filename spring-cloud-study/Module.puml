@@ -85,4 +85,9 @@ package "spring-cloud-nacos"{
    nws --> ns
    ncs --> ns
 }
+
+ component fdc[
+   fixed-discovery-client-demo
+   自定义discovery client 来请求服务
+   ]
 @enduml

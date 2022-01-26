@@ -27,6 +27,7 @@ public class FixedDiscoveryClient implements DiscoveryClient {
         if (!SERVICE_ID.equalsIgnoreCase(serviceId)) {
             return Collections.emptyList();
         }
+        @=
         // 这里忽略了很多边界条件判断，认为就是 HOST:PORT 形式
         return services.stream()
                 .map(s -> new DefaultServiceInstance(s,
