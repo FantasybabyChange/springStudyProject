@@ -10,6 +10,13 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
+/**
+ * 断路器 切面
+ *
+ *
+ * @author Reid.Liu
+ * @date 2022/02/08
+ */
 @Aspect
 @Component
 @Slf4j
