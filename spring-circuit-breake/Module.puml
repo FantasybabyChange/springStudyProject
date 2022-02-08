@@ -1,0 +1,17 @@
+@startuml SPRING_CIRCUIT_BREAKE
+!theme sketchy-outline
+title spring circuit breake
+skinparam interface {
+}
+skinparam component {
+   backgroundColor LightSteelBlue
+   FontSize 14
+   ArrowFontSize 14
+   ArrowFontColor #777777
+   ArrowColor #FF6655
+}
+ component cbd[
+   circuit-break-demo
+   自定义断路器 
+   ]
+@enduml
