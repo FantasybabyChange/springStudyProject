@@ -19,4 +19,12 @@ component hcs[
 hystrix-customer-service
 使用hystrix 来实现熔断
 ]
+component hscs[
+hystrix-stream-customer-service
+ 使用hystrix stream来埋点
+]
+component hdd[
+hystrix-dashboard-demo
+使用hystrix dashboard
+]
 @enduml

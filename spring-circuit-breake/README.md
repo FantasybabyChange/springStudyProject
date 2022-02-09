@@ -4,6 +4,8 @@
 
 1. circuit-break-demo 自定义断路器
 2. hystrix-customer-service 使用hystrix实现断路器
+   - hystrix-dashboard-demo
+   - hystrix-stream-customer-service
 ## PRJOECT  MODULE
 ![PROJECT MODULE](./Module/SPRING_CIRCUIT_BREAKE.PNG)
 	
