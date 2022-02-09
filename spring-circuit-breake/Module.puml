@@ -14,4 +14,9 @@ skinparam component {
    circuit-break-demo
    自定义断路器 
    ]
+
+component hcs[
+hystrix-customer-service
+使用hystrix 来实现熔断
+]
 @enduml
