@@ -23,6 +23,7 @@
     </properties>
     <modules>
         <module>circuit-break-demo</module>
+        <module>resilience4j-circuitbreaker-demo</module>
     </modules>
     <dependencies>
         <dependency>
