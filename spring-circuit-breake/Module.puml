@@ -15,6 +15,7 @@ skinparam component {
    自定义断路器 
    ]
 
+package hystrix{
 component hcs[
 hystrix-customer-service
 使用hystrix 来实现熔断
@@ -27,4 +28,11 @@ component hdd[
 hystrix-dashboard-demo
 使用hystrix dashboard
 ]
+component htb[
+turbine-demo
+使用 turbine 来做集群得断路监控
+]
+
+}
+
 @enduml

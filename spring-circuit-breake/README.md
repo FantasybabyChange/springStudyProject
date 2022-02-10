@@ -6,6 +6,7 @@
 2. hystrix-customer-service 使用hystrix实现断路器
    - hystrix-dashboard-demo
    - hystrix-stream-customer-service
+   - turbine-demo
 ## PRJOECT  MODULE
 ![PROJECT MODULE](./Module/SPRING_CIRCUIT_BREAKE.PNG)
 	
