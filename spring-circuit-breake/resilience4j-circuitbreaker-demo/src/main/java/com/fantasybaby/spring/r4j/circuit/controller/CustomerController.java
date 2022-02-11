@@ -11,11 +11,13 @@ import io.github.resilience4j.circuitbreaker.CircuitBreakerRegistry;
 import io.vavr.control.Try;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -29,6 +31,9 @@ public class CustomerController {
     @Autowired
     private CoffeeOrderService coffeeOrderService;
     private CircuitBreaker circuitBreaker;
+    @Resource
+    private CircuitBreakerFactory cbFactory;
+
 
     public CustomerController(CircuitBreakerRegistry registry) {
         circuitBreaker = registry.circuitBreaker("menu");
@@ -36,6 +41,9 @@ public class CustomerController {
 
     @GetMapping("/menu")
     public List<Coffee> readMenu() {
+//        cbFactory.create("menu").run(
+//                CircuitBreaker.decorateSupplier(circuitBreaker,
+//                        () -> coffeeService.getAll()), throwable -> Collections.emptyList());
         return Try.ofSupplier(
                 CircuitBreaker.decorateSupplier(circuitBreaker,
                         () -> coffeeService.getAll()))
