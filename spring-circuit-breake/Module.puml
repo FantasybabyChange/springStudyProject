@@ -10,29 +10,40 @@ skinparam component {
    ArrowFontColor #777777
    ArrowColor #FF6655
 }
- component cbd[
-   circuit-break-demo
-   自定义断路器 
-   ]
+component cbd[
+circuit-break-demo
+自定义断路器
+]
 
 package hystrix{
-component hcs[
-hystrix-customer-service
-使用hystrix 来实现熔断
-]
-component hscs[
-hystrix-stream-customer-service
- 使用hystrix stream来埋点
-]
-component hdd[
-hystrix-dashboard-demo
-使用hystrix dashboard
-]
-component htb[
-turbine-demo
-使用 turbine 来做集群得断路监控
-]
+   component hcs[
+   hystrix-customer-service
+   使用hystrix 来实现熔断
+   ]
+   component hscs[
+   hystrix-stream-customer-service
+   使用hystrix stream来埋点
+   ]
+   component hdd[
+   hystrix-dashboard-demo
+   使用hystrix dashboard
+   ]
+   component htb[
+   turbine-demo
+   使用 turbine 来做集群得断路监控
+   ]
 
+}
+
+package resilience4j{
+    component rcd[
+   resilience4j-circuitbreaker-demo
+      通过resilience4j来实现断路器
+   ]
+   component bcs[
+   bulkhead-customer-service
+      通过resilience4j的 bulkhead来实现服务限流
+   ]
 }
 
 @enduml

@@ -24,6 +24,7 @@
     <modules>
         <module>circuit-break-demo</module>
         <module>resilience4j-circuitbreaker-demo</module>
+        <module>bulkhead-customer-service</module>
     </modules>
     <dependencies>
         <dependency>
@@ -62,6 +63,13 @@
                 <artifactId>spring-cloud-starter-consul-discovery</artifactId>
                 <version>3.1.0</version>
             </dependency>
+            <dependency>
+                <groupId>io.github.resilience4j</groupId>
+                <artifactId>resilience4j-spring-cloud2</artifactId>
+                <version>1.7.0</version>
+            </dependency>
+
+
 
         </dependencies>
     </dependencyManagement>
