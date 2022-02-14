@@ -44,6 +44,11 @@ package resilience4j{
    bulkhead-customer-service
       通过resilience4j的 bulkhead来实现服务限流
    ]
+
+   component rws[
+   ratelimiter-waiter-service
+      通过resilience4j的 ratelimiter来实现服务在某个时间内只允许多少次请求
+   ]
 }
 
 @enduml

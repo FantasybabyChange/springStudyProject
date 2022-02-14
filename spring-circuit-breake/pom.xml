@@ -25,6 +25,7 @@
         <module>circuit-break-demo</module>
         <module>resilience4j-circuitbreaker-demo</module>
         <module>bulkhead-customer-service</module>
+        <module>ratelimiter-waiter-service</module>
     </modules>
     <dependencies>
         <dependency>
