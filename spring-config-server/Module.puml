@@ -1,0 +1,19 @@
+@startuml SPRING_CONFIG_SERVER
+!theme sketchy-outline
+title spring config server
+skinparam interface {
+}
+skinparam component {
+   backgroundColor LightSteelBlue
+   FontSize 14
+   ArrowFontSize 14
+   ArrowFontColor #777777
+   ArrowColor #FF6655
+}
+component gcws[
+git-config-waiter-service
+通过git实现配置中心
+]
+
+
+@enduml
