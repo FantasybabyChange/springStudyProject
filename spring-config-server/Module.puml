@@ -10,10 +10,18 @@ skinparam component {
    ArrowFontColor #777777
    ArrowColor #FF6655
 }
-component gcws[
-git-config-waiter-service
-通过git实现配置中心
-]
+
+package "spring-cloud-nacos"{
+   component   cs[
+   config-server
+   使用git来搭建本地配置服务
+   ]
+   component gcws[
+   git-config-waiter-service
+   通过git配置中心获取配置
+   ]
+   gcws -> cs
+}
 
 
 @enduml
