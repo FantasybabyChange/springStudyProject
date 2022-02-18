@@ -23,5 +23,18 @@ package "spring-cloud-nacos"{
    gcws -> cs
 }
 
+component zcws[
+   zk-config-waiter-service
+    使用zk来做配置中心
+   ]
+component ccws[
+   consul-config-waiter-service
+    使用consul来做配置中心
+   ]
+
+component ncws[
+   nacos-config-waiter-service
+    使用nacos来做配置中心
+   ]
 
 @enduml
