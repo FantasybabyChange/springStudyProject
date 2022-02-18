@@ -18,7 +18,7 @@ package "spring-cloud-nacos"{
    ]
    component gcws[
    git-config-waiter-service
-   通过git配置中心获取配置
+    配置服务客户端,通过git配置中心获取配置
    ]
    gcws -> cs
 }
