@@ -1,0 +1,27 @@
+@startuml SPRING_CLOUD_STREAM
+!theme sketchy-outline
+title spring cloud stream
+skinparam interface {
+}
+skinparam component {
+   backgroundColor LightSteelBlue
+   FontSize 14
+   ArrowFontSize 14
+   ArrowFontColor #777777
+   ArrowColor #FF6655
+}
+
+package "rabbit mq"{
+   component   rbs[
+   rabbitmq-barista-service
+    接收消息的咖啡师
+   ]
+   component rws[
+   rabbitmq-waiter-service
+    发送消息的服务员
+   ]
+   rws -> rbs
+}
+
+
+@enduml

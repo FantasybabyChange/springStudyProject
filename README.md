@@ -36,4 +36,5 @@
 
 [spring-config-server](spring-config-server/README.md)  
 
+[spring-cloud-stream](spring-cloud-stream/README.md)  
 
