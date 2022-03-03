@@ -9,10 +9,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories
 @SpringBootApplication
 @EnableBinding(Waiter.class)
-public class BaristaServiceApplication {
+public class RbMqBaristaServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BaristaServiceApplication.class, args);
+		SpringApplication.run(RbMqBaristaServiceApplication.class, args);
 	}
 
 }
