@@ -21,6 +21,17 @@ package "rabbit mq"{
     发送消息的服务员
    ]
    rws -> rbs
+   rbs ->rws
+   component   fprbs[
+   fp-rabbitmq-barista-service
+    函数式编程接收消息的咖啡师
+   ]
+   component fprws[
+   fp-rabbitmq-waiter-service
+    函数式编程发送消息的服务员
+   ]
+   fprws -> fprbs
+   fprbs ->fprws
 }
 
 

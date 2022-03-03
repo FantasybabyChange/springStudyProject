@@ -25,6 +25,8 @@
     <modules>
         <module>rabbitmq-waiter-service</module>
         <module>rabbitmq-barista-service</module>
+        <module>fp-rabbitmq-waiter-service</module>
+        <module>fp-rabbitmq-barista-service</module>
     </modules>
     <dependencies>
         <dependency>
