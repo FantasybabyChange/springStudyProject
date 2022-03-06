@@ -21,10 +21,10 @@ import java.util.TimeZone;
 @EnableCaching
 @EnableDiscoveryClient
 @EnableBinding(Barista.class)
-public class WaiterServiceApplication implements WebMvcConfigurer {
+public class KafkaWaiterServiceApplication implements WebMvcConfigurer {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WaiterServiceApplication.class, args);
+		SpringApplication.run(KafkaWaiterServiceApplication.class, args);
 	}
 
 	@Override
