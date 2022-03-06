@@ -5,7 +5,6 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.6.1</version>
-
         <!--<version>2.3.1.RELEASE</version>-->
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
@@ -27,6 +26,8 @@
         <module>rabbitmq-barista-service</module>
         <module>fp-rabbitmq-waiter-service</module>
         <module>fp-rabbitmq-barista-service</module>
+        <module>kafka-waiter-service</module>
+        <module>kafka-barista-service</module>
     </modules>
     <dependencies>
         <dependency>
