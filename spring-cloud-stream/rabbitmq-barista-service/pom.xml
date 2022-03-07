@@ -11,8 +11,6 @@
 	<artifactId>rb-barista-service</artifactId>
 	<name>rb-barista-service</name>
 	<description>Demo project for Spring Boot</description>
-
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

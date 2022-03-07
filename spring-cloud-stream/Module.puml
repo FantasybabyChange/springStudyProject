@@ -33,6 +33,24 @@ package "rabbit mq"{
    fprws -> fprbs
    fprbs ->fprws
 }
+package "kafka"{
+   component kbs[
+      kafka-barista-service
+      通过Kafka发送订阅消息的 咖啡师
+   ]
+   component kws[
+      kafka-waiter-service
+      通过Kafka发送订阅消息的 服务人员
+   ]
+}
 
+component scs[
+      scheduled-customer-service
+      通过schedule 轮询订阅订单状态
+   ]
+scs->kws
+kws -->kbs
+kbs-->kws
+scs ->db:查询状态
 
 @enduml
