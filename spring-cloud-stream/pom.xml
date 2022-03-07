@@ -29,6 +29,8 @@
         <module>kafka-waiter-service</module>
         <module>kafka-barista-service</module>
         <module>scheduled-customer-service</module>
+        <module>busy-waiter-service</module>
+        <module>lazy-customer-service</module>
     </modules>
     <dependencies>
         <dependency>

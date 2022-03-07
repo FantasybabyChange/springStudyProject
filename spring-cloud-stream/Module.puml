@@ -32,7 +32,19 @@ package "rabbit mq"{
    ]
    fprws -> fprbs
    fprbs ->fprws
+
+   component bws[
+      busy-waiter-service
+       通知客户的服务员
+      ]
+   bws-->rbs:通知订单支付
+
 }
+component lcs[
+     lazy-customer-service
+      接收通知的客户
+     ]
+bws-->lcs:消息通知取走快递
 package "kafka"{
    component kbs[
       kafka-barista-service
