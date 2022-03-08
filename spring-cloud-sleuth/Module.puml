@@ -1,0 +1,43 @@
+@startuml SPRING_CLOUD_SLEUTH
+!theme sketchy-outline
+title spring cloud sleuth
+skinparam interface {
+}
+skinparam component {
+   backgroundColor LightSteelBlue
+   FontSize 14
+   ArrowFontSize 14
+   ArrowFontColor #777777
+   ArrowColor #FF6655
+}
+
+package "rabbit mq"{
+   component   rbs[
+   rabbitmq-barista-service
+    接收消息的咖啡师
+   ]
+   component rws[
+   rabbitmq-waiter-service
+    发送消息的服务员
+   ]
+   rws -> rbs
+   rbs ->rws
+   component   fprbs[
+   fp-rabbitmq-barista-service
+    函数式编程接收消息的咖啡师
+   ]
+   component fprws[
+   fp-rabbitmq-waiter-service
+    函数式编程发送消息的服务员
+   ]
+   fprws -> fprbs
+   fprbs ->fprws
+
+   component bws[
+      busy-waiter-service
+       通知客户的服务员
+      ]
+   bws-->rbs:通知订单支付
+
+}
+@enduml

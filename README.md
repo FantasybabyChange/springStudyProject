@@ -38,3 +38,5 @@
 
 [spring-cloud-stream](spring-cloud-stream/README.md)  
 
+[spring-cloud-sleuth](spring-cloud-sleuth/README.md)  
+
