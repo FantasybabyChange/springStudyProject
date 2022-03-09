@@ -22,10 +22,10 @@ import java.util.TimeZone;
 @EnableCaching
 @EnableDiscoveryClient
 @EnableBinding({ Barista.class, Customer.class })
-public class WaiterServiceApplication implements WebMvcConfigurer {
+public class SleuthWaiterServiceApplication implements WebMvcConfigurer {
 
     public static void main(String[] args) {
-        SpringApplication.run(WaiterServiceApplication.class, args);
+        SpringApplication.run(SleuthWaiterServiceApplication.class, args);
     }
 
     @Override
