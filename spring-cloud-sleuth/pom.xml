@@ -24,6 +24,7 @@
     <modules>
         <module>sleuth-waiter-service</module>
         <module>sleuth-customer-service</module>
+        <module>mq-zipkin-barista-service</module>
     </modules>
     <dependencies>
         <!--<dependency>
