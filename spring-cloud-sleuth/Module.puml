@@ -11,33 +11,18 @@ skinparam component {
    ArrowColor #FF6655
 }
 
-package "rabbit mq"{
-   component   rbs[
-   rabbitmq-barista-service
-    接收消息的咖啡师
-   ]
-   component rws[
-   rabbitmq-waiter-service
-    发送消息的服务员
-   ]
-   rws -> rbs
-   rbs ->rws
-   component   fprbs[
-   fp-rabbitmq-barista-service
-    函数式编程接收消息的咖啡师
-   ]
-   component fprws[
-   fp-rabbitmq-waiter-service
-    函数式编程发送消息的服务员
-   ]
-   fprws -> fprbs
-   fprbs ->fprws
+component sws[
+   sleuth-waiter-service
+   waiter service 添加seuth 链路追踪
+]
 
-   component bws[
-      busy-waiter-service
-       通知客户的服务员
-      ]
-   bws-->rbs:通知订单支付
+component mzbs[
+   mq-zipkin-barista-service
+   barista service 添加seuth 链路追踪 mq消息
+]
 
-}
+component scs[
+   sleuth-customer-service
+   customer service 添加sleuth 链路追踪
+]
 @enduml

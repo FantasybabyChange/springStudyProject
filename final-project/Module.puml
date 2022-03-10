@@ -1,0 +1,28 @@
+@startuml FINAL-PROJECT
+!theme sketchy-outline
+title final project
+skinparam interface {
+}
+skinparam component {
+   backgroundColor LightSteelBlue
+   FontSize 14
+   ArrowFontSize 14
+   ArrowFontColor #777777
+   ArrowColor #FF6655
+}
+
+component fws[
+   final-waiter-service
+   最终版本 加了docker
+]
+
+component fbs[
+   final-barista-service
+   最终版本 加了docker
+]
+
+component fcs[
+   final-customer-service
+   最终版本 加了docker
+]
+@enduml
